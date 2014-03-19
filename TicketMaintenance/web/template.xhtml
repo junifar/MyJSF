@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Tiket Maintenance</title>
+        <h:outputStylesheet name="css/bootstrap.min.css"/>
+        <h:outputStylesheet name="css/bootstrap-theme.min.css"/>
+        <h:outputScript name="js/bootstrap.min.js"/>        
+        <h:outputScript name="js/jquery.js"/>
+    </h:head>
+    <h:body>        
+        <div class="container">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <h:link hreflang="/index" value="Tiket Maintenance" class="navbar-brand"/>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><h:link hreflang="/index" value="Home"/></li>
+                        <li><h:link hreflang="/master.xhtml" value="Master Data"/></li>
+                        <h:l
+                    </ul>
+                </div><!--/.nav-collapse -->                
+            </div>
+        </div>
+        <div class="container">
+            <ui:insert name="body">Default Body</ui:insert>
+        </div>
+    </h:body>
+</html>
+

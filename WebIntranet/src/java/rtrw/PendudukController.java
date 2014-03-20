@@ -20,26 +20,7 @@ import javax.faces.model.ListDataModel;
  */
 @ManagedBean
 @RequestScoped
-public class PendudukController {
-
-    private String nik;
-
-    public String getNik() {
-        return nik;
-    }
-
-    public void setNik(String nik) {
-        this.nik = nik;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    private String name;
+public class PendudukController extends Penduduk {
     
     int startId;
     int endId;
@@ -78,7 +59,7 @@ public class PendudukController {
     
     public String newPenduduk() throws IOException
     {
-        helper.insertPenduduk(nik, name);
+        helper.insertPenduduk(getNik(), getName());
         return "viewpenduduk?faces-redirect=true";
     }
     

@@ -3,16 +3,13 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated Mar 20, 2014 10:11:07 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
-    <class name="rtrw.Penduduk" table="penduduk" catalog="rtrw">
+    <class name="datawarga.JenisKelamin" table="jenis_kelamin" catalog="rtrw">
         <id name="id" type="java.lang.Integer">
             <column name="ID" />
-            <generator class="identity"></generator>
+            <generator class="identity" />
         </id>
-        <property name="nik" type="string">
-            <column name="NIK" length="20" unique="true" />
-        </property>
         <property name="name" type="string">
-            <column name="Name" length="200" />
+            <column name="NAME" length="30" />
         </property>
     </class>
 </hibernate-mapping>

@@ -1,4 +1,4 @@
-package rtrw;
+package datawarga;
 // Generated Mar 20, 2014 10:11:04 PM by Hibernate Tools 3.6.0
 
 

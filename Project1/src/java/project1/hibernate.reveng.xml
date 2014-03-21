@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="rtrw"/>
+  <table-filter match-name="jenis_kelamin"/>
+  <table-filter match-name="rumah"/>
+  <table-filter match-name="warga"/>
+  <table-filter match-name="status_pernikahan"/>
+  <table-filter match-name="agama"/>
+  <table-filter match-name="status_keluarga"/>
+</hibernate-reverse-engineering>

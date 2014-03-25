@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateRumahTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{rumahController.selected.id}" title="#{bundle.CreateRumahTitle_id}" required="true" requiredMessage="#{bundle.CreateRumahRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_blokRumah}" for="blokRumah" />
+                    <h:inputText id="blokRumah" value="#{rumahController.selected.blokRumah}" title="#{bundle.CreateRumahTitle_blokRumah}" />
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_nomorRumah}" for="nomorRumah" />
+                    <h:inputText id="nomorRumah" value="#{rumahController.selected.nomorRumah}" title="#{bundle.CreateRumahTitle_nomorRumah}" />
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_kepalaKeluargaId}" for="kepalaKeluargaId" />
+                    <h:inputText id="kepalaKeluargaId" value="#{rumahController.selected.kepalaKeluargaId}" title="#{bundle.CreateRumahTitle_kepalaKeluargaId}" />
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_telp}" for="telp" />
+                    <h:inputText id="telp" value="#{rumahController.selected.telp}" title="#{bundle.CreateRumahTitle_telp}" />
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_handphone}" for="handphone" />
+                    <h:inputText id="handphone" value="#{rumahController.selected.handphone}" title="#{bundle.CreateRumahTitle_handphone}" />
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{rumahController.selected.created}" title="#{bundle.CreateRumahTitle_created}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{rumahController.selected.modified}" title="#{bundle.CreateRumahTitle_modified}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_userCreated}" for="userCreated" />
+                    <h:inputText id="userCreated" value="#{rumahController.selected.userCreated}" title="#{bundle.CreateRumahTitle_userCreated}" />
+                    <h:outputLabel value="#{bundle.CreateRumahLabel_userModified}" for="userModified" />
+                    <h:inputText id="userModified" value="#{rumahController.selected.userModified}" title="#{bundle.CreateRumahTitle_userModified}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{rumahController.create}" value="#{bundle.CreateRumahSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{rumahController.prepareList}" value="#{bundle.CreateRumahShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateRumahIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

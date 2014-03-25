@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 25, 2014 6:54:35 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="model.Rumah" table="rumah" catalog="rtrw">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="blokRumah" type="java.lang.Character">
+            <column name="BLOK_RUMAH" length="1" />
+        </property>
+        <property name="nomorRumah" type="java.lang.Integer">
+            <column name="NOMOR_RUMAH" />
+        </property>
+        <property name="kepalaKeluargaId" type="java.lang.Integer">
+            <column name="KEPALA_KELUARGA_ID" />
+        </property>
+        <property name="telp" type="string">
+            <column name="TELP" length="20" />
+        </property>
+        <property name="handphone" type="string">
+            <column name="HANDPHONE" length="40" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="19" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="19" />
+        </property>
+        <property name="userCreated" type="java.lang.Integer">
+            <column name="USER_CREATED" />
+        </property>
+        <property name="userModified" type="java.lang.Integer">
+            <column name="USER_MODIFIED" />
+        </property>
+    </class>
+</hibernate-mapping>

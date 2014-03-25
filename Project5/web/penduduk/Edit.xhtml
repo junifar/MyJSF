@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditPendudukTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditPendudukLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{pendudukController.selected.id}" title="#{bundle.EditPendudukTitle_id}" required="true" requiredMessage="#{bundle.EditPendudukRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditPendudukLabel_nik}" for="nik" />
+                    <h:inputText id="nik" value="#{pendudukController.selected.nik}" title="#{bundle.EditPendudukTitle_nik}" required="true" requiredMessage="#{bundle.EditPendudukRequiredMessage_nik}"/>
+                    <h:outputLabel value="#{bundle.EditPendudukLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{pendudukController.selected.name}" title="#{bundle.EditPendudukTitle_name}" required="true" requiredMessage="#{bundle.EditPendudukRequiredMessage_name}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{pendudukController.update}" value="#{bundle.EditPendudukSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditPendudukViewLink}"/>
+                <br />
+                <h:commandLink action="#{pendudukController.prepareList}" value="#{bundle.EditPendudukShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditPendudukIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

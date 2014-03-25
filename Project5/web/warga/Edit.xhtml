@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditWargaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditWargaLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{wargaController.selected.id}" title="#{bundle.EditWargaTitle_id}" required="true" requiredMessage="#{bundle.EditWargaRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditWargaLabel_idRumah}" for="idRumah" />
+                    <h:inputText id="idRumah" value="#{wargaController.selected.idRumah}" title="#{bundle.EditWargaTitle_idRumah}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_nama}" for="nama" />
+                    <h:inputText id="nama" value="#{wargaController.selected.nama}" title="#{bundle.EditWargaTitle_nama}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_jenisKelamin}" for="jenisKelamin" />
+                    <h:inputText id="jenisKelamin" value="#{wargaController.selected.jenisKelamin}" title="#{bundle.EditWargaTitle_jenisKelamin}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_agama}" for="agama" />
+                    <h:inputText id="agama" value="#{wargaController.selected.agama}" title="#{bundle.EditWargaTitle_agama}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_statusPernikahan}" for="statusPernikahan" />
+                    <h:inputText id="statusPernikahan" value="#{wargaController.selected.statusPernikahan}" title="#{bundle.EditWargaTitle_statusPernikahan}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_statusDalamKeluarga}" for="statusDalamKeluarga" />
+                    <h:inputText id="statusDalamKeluarga" value="#{wargaController.selected.statusDalamKeluarga}" title="#{bundle.EditWargaTitle_statusDalamKeluarga}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_handphone}" for="handphone" />
+                    <h:inputText id="handphone" value="#{wargaController.selected.handphone}" title="#{bundle.EditWargaTitle_handphone}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_tempatLahir}" for="tempatLahir" />
+                    <h:inputText id="tempatLahir" value="#{wargaController.selected.tempatLahir}" title="#{bundle.EditWargaTitle_tempatLahir}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_tanggalLahir}" for="tanggalLahir" />
+                    <h:inputText id="tanggalLahir" value="#{wargaController.selected.tanggalLahir}" title="#{bundle.EditWargaTitle_tanggalLahir}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditWargaLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{wargaController.selected.created}" title="#{bundle.EditWargaTitle_created}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditWargaLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{wargaController.selected.modified}" title="#{bundle.EditWargaTitle_modified}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditWargaLabel_userCreated}" for="userCreated" />
+                    <h:inputText id="userCreated" value="#{wargaController.selected.userCreated}" title="#{bundle.EditWargaTitle_userCreated}" />
+                    <h:outputLabel value="#{bundle.EditWargaLabel_userModified}" for="userModified" />
+                    <h:inputText id="userModified" value="#{wargaController.selected.userModified}" title="#{bundle.EditWargaTitle_userModified}" />
+                </h:panelGrid>
+                <h:commandLink action="#{wargaController.update}" value="#{bundle.EditWargaSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditWargaViewLink}"/>
+                <br />
+                <h:commandLink action="#{wargaController.prepareList}" value="#{bundle.EditWargaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditWargaIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

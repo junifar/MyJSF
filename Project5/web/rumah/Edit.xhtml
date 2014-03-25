@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditRumahTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditRumahLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{rumahController.selected.id}" title="#{bundle.EditRumahTitle_id}" required="true" requiredMessage="#{bundle.EditRumahRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditRumahLabel_blokRumah}" for="blokRumah" />
+                    <h:inputText id="blokRumah" value="#{rumahController.selected.blokRumah}" title="#{bundle.EditRumahTitle_blokRumah}" />
+                    <h:outputLabel value="#{bundle.EditRumahLabel_nomorRumah}" for="nomorRumah" />
+                    <h:inputText id="nomorRumah" value="#{rumahController.selected.nomorRumah}" title="#{bundle.EditRumahTitle_nomorRumah}" />
+                    <h:outputLabel value="#{bundle.EditRumahLabel_kepalaKeluargaId}" for="kepalaKeluargaId" />
+                    <h:inputText id="kepalaKeluargaId" value="#{rumahController.selected.kepalaKeluargaId}" title="#{bundle.EditRumahTitle_kepalaKeluargaId}" />
+                    <h:outputLabel value="#{bundle.EditRumahLabel_telp}" for="telp" />
+                    <h:inputText id="telp" value="#{rumahController.selected.telp}" title="#{bundle.EditRumahTitle_telp}" />
+                    <h:outputLabel value="#{bundle.EditRumahLabel_handphone}" for="handphone" />
+                    <h:inputText id="handphone" value="#{rumahController.selected.handphone}" title="#{bundle.EditRumahTitle_handphone}" />
+                    <h:outputLabel value="#{bundle.EditRumahLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{rumahController.selected.created}" title="#{bundle.EditRumahTitle_created}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRumahLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{rumahController.selected.modified}" title="#{bundle.EditRumahTitle_modified}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRumahLabel_userCreated}" for="userCreated" />
+                    <h:inputText id="userCreated" value="#{rumahController.selected.userCreated}" title="#{bundle.EditRumahTitle_userCreated}" />
+                    <h:outputLabel value="#{bundle.EditRumahLabel_userModified}" for="userModified" />
+                    <h:inputText id="userModified" value="#{rumahController.selected.userModified}" title="#{bundle.EditRumahTitle_userModified}" />
+                </h:panelGrid>
+                <h:commandLink action="#{rumahController.update}" value="#{bundle.EditRumahSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditRumahViewLink}"/>
+                <br />
+                <h:commandLink action="#{rumahController.prepareList}" value="#{bundle.EditRumahShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditRumahIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

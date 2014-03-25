@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewWargaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewWargaLabel_id}"/>
+                    <h:outputText value="#{wargaController.selected.id}" title="#{bundle.ViewWargaTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_idRumah}"/>
+                    <h:outputText value="#{wargaController.selected.idRumah}" title="#{bundle.ViewWargaTitle_idRumah}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_nama}"/>
+                    <h:outputText value="#{wargaController.selected.nama}" title="#{bundle.ViewWargaTitle_nama}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_jenisKelamin}"/>
+                    <h:outputText value="#{wargaController.selected.jenisKelamin}" title="#{bundle.ViewWargaTitle_jenisKelamin}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_agama}"/>
+                    <h:outputText value="#{wargaController.selected.agama}" title="#{bundle.ViewWargaTitle_agama}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_statusPernikahan}"/>
+                    <h:outputText value="#{wargaController.selected.statusPernikahan}" title="#{bundle.ViewWargaTitle_statusPernikahan}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_statusDalamKeluarga}"/>
+                    <h:outputText value="#{wargaController.selected.statusDalamKeluarga}" title="#{bundle.ViewWargaTitle_statusDalamKeluarga}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_handphone}"/>
+                    <h:outputText value="#{wargaController.selected.handphone}" title="#{bundle.ViewWargaTitle_handphone}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_tempatLahir}"/>
+                    <h:outputText value="#{wargaController.selected.tempatLahir}" title="#{bundle.ViewWargaTitle_tempatLahir}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_tanggalLahir}"/>
+                    <h:outputText value="#{wargaController.selected.tanggalLahir}" title="#{bundle.ViewWargaTitle_tanggalLahir}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewWargaLabel_created}"/>
+                    <h:outputText value="#{wargaController.selected.created}" title="#{bundle.ViewWargaTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewWargaLabel_modified}"/>
+                    <h:outputText value="#{wargaController.selected.modified}" title="#{bundle.ViewWargaTitle_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewWargaLabel_userCreated}"/>
+                    <h:outputText value="#{wargaController.selected.userCreated}" title="#{bundle.ViewWargaTitle_userCreated}"/>
+                    <h:outputText value="#{bundle.ViewWargaLabel_userModified}"/>
+                    <h:outputText value="#{wargaController.selected.userModified}" title="#{bundle.ViewWargaTitle_userModified}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{wargaController.destroyAndView}" value="#{bundle.ViewWargaDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewWargaEditLink}"/>
+                <br />
+                <h:commandLink action="#{wargaController.prepareCreate}" value="#{bundle.ViewWargaCreateLink}" />
+                <br />
+                <h:commandLink action="#{wargaController.prepareList}" value="#{bundle.ViewWargaShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewWargaIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

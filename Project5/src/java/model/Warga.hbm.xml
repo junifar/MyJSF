@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 25, 2014 6:54:35 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="model.Warga" table="warga" catalog="rtrw">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="idRumah" type="java.lang.Integer">
+            <column name="ID_RUMAH" />
+        </property>
+        <property name="nama" type="string">
+            <column name="NAMA" length="100" />
+        </property>
+        <property name="jenisKelamin" type="java.lang.Integer">
+            <column name="JENIS_KELAMIN" />
+        </property>
+        <property name="agama" type="java.lang.Integer">
+            <column name="AGAMA" />
+        </property>
+        <property name="statusPernikahan" type="java.lang.Integer">
+            <column name="STATUS_PERNIKAHAN" />
+        </property>
+        <property name="statusDalamKeluarga" type="java.lang.Integer">
+            <column name="STATUS_DALAM_KELUARGA" />
+        </property>
+        <property name="handphone" type="string">
+            <column name="HANDPHONE" length="40" />
+        </property>
+        <property name="tempatLahir" type="string">
+            <column name="TEMPAT_LAHIR" length="100" />
+        </property>
+        <property name="tanggalLahir" type="timestamp">
+            <column name="TANGGAL_LAHIR" length="19" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="19" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="19" />
+        </property>
+        <property name="userCreated" type="java.lang.Integer">
+            <column name="USER_CREATED" />
+        </property>
+        <property name="userModified" type="java.lang.Integer">
+            <column name="USER_MODIFIED" />
+        </property>
+    </class>
+</hibernate-mapping>

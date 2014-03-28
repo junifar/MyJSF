@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.Projects" table="PROJECTS" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="siteId" type="java.lang.Integer">
+            <column name="SITE_ID" />
+        </property>
+        <property name="prasetiaProjectId" type="string">
+            <column name="PRASETIA_PROJECT_ID" length="12" />
+        </property>
+        <property name="siteProjectTypeId" type="java.lang.Integer">
+            <column name="SITE_PROJECT_TYPE_ID" />
+        </property>
+        <property name="projectManagerId" type="java.lang.Integer">
+            <column name="PROJECT_MANAGER_ID" />
+        </property>
+        <property name="customerContactId" type="java.lang.Integer">
+            <column name="CUSTOMER_CONTACT_ID" />
+        </property>
+        <property name="statusId" type="java.lang.Integer">
+            <column name="STATUS_ID" />
+        </property>
+        <property name="tanggalSuratTugas" type="timestamp">
+            <column name="TANGGAL_SURAT_TUGAS" length="23" />
+        </property>
+        <property name="tanggalDimulai" type="timestamp">
+            <column name="TANGGAL_DIMULAI" length="23" />
+        </property>
+        <property name="tanggalTargetRfi" type="timestamp">
+            <column name="TANGGAL_TARGET_RFI" length="23" />
+        </property>
+        <property name="tanggalSelesai" type="timestamp">
+            <column name="TANGGAL_SELESAI" length="23" />
+        </property>
+        <property name="presentase" type="java.lang.Integer">
+            <column name="PRESENTASE" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="250" />
+        </property>
+        <property name="projectOfficerId" type="java.lang.Integer">
+            <column name="PROJECT_OFFICER_ID" />
+        </property>
+        <property name="poId" type="java.lang.Integer">
+            <column name="PO_ID" />
+        </property>
+        <property name="boqId" type="java.lang.Integer">
+            <column name="BOQ_ID" />
+        </property>
+        <property name="userCreated" type="java.lang.Integer">
+            <column name="USER_CREATED" />
+        </property>
+        <property name="userModified" type="java.lang.Integer">
+            <column name="USER_MODIFIED" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" />
+        </property>
+        <property name="operatorId" type="java.lang.Integer">
+            <column name="OPERATOR_ID" />
+        </property>
+        <property name="mandorId" type="java.lang.Integer">
+            <column name="MANDOR_ID" />
+        </property>
+        <property name="tanggalTargetRfiPrasetia" type="timestamp">
+            <column name="TANGGAL_TARGET_RFI_PRASETIA" length="23" />
+        </property>
+        <property name="dayaPln" type="string">
+            <column name="DAYA_PLN" length="50" />
+        </property>
+        <property name="pabrikasiTower" type="string">
+            <column name="PABRIKASI_TOWER" length="50" />
+        </property>
+        <property name="shelterTypeId" type="java.lang.Integer">
+            <column name="SHELTER_TYPE_ID" />
+        </property>
+        <property name="pph" type="java.lang.Integer">
+            <column name="PPH" />
+        </property>
+        <property name="miscWorksId" type="java.lang.Integer">
+            <column name="MISC_WORKS_ID" />
+        </property>
+        <property name="plnStatus" type="java.lang.Integer">
+            <column name="PLN_STATUS" />
+        </property>
+        <property name="noMemoInternal" type="string">
+            <column name="NO_MEMO_INTERNAL" length="100" />
+        </property>
+        <property name="addworkTypeId" type="java.lang.Integer">
+            <column name="ADDWORK_TYPE_ID" />
+        </property>
+        <property name="meetingDrm" type="timestamp">
+            <column name="MEETING_DRM" length="23" />
+        </property>
+        <property name="tanggalFakturPajak" type="timestamp">
+            <column name="TANGGAL_FAKTUR_PAJAK" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

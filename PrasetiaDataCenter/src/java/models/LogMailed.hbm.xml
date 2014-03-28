@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.LogMailed" table="LOG_MAILED" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USER_ID" />
+        </property>
+        <property name="attentionTo" type="string">
+            <column name="ATTENTION_TO" length="8000" />
+        </property>
+        <property name="message" type="string">
+            <column name="MESSAGE" length="3000" />
+        </property>
+        <property name="retries" type="java.lang.Integer">
+            <column name="RETRIES" />
+        </property>
+        <property name="dateCreated" type="timestamp">
+            <column name="DATE_CREATED" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

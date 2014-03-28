@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.Waspang" table="WASPANG" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="50" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="20" />
+        </property>
+        <property name="handphone" type="string">
+            <column name="HANDPHONE" length="20" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="100" />
+        </property>
+        <property name="alamat" type="string">
+            <column name="ALAMAT" length="200" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" />
+        </property>
+        <property name="noKtp" type="string">
+            <column name="NO_KTP" length="20" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" />
+        </property>
+        <property name="username" type="string">
+            <column name="USERNAME" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.SiteTypeProgresses" table="SITE_TYPE_PROGRESSES" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="siteTypeId" type="int">
+            <column name="SITE_TYPE_ID" not-null="true" />
+        </property>
+        <property name="progressDetailId" type="int">
+            <column name="PROGRESS_DETAIL_ID" not-null="true" />
+        </property>
+        <property name="workDays" type="java.lang.Integer">
+            <column name="WORK_DAYS" />
+        </property>
+        <property name="planDays" type="java.lang.Integer">
+            <column name="PLAN_DAYS" />
+        </property>
+        <property name="groupCustomerId" type="java.lang.Integer">
+            <column name="GROUP_CUSTOMER_ID" />
+        </property>
+        <property name="siteTypeProgressVersion" type="java.lang.Integer">
+            <column name="SITE_TYPE_PROGRESS_VERSION" />
+        </property>
+    </class>
+</hibernate-mapping>

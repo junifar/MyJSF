@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.Users" table="USERS" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="groupId" type="int">
+            <column name="GROUP_ID" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="100" />
+        </property>
+        <property name="username" type="string">
+            <column name="USERNAME" length="50" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="100" />
+        </property>
+        <property name="noHandphone" type="string">
+            <column name="NO_HANDPHONE" length="100" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+        <property name="lastLogin" type="timestamp">
+            <column name="LAST_LOGIN" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

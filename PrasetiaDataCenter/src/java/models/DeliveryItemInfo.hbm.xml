@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.DeliveryItemInfo" table="DELIVERY_ITEM_INFO" schema="dbo" catalog="PRST001_prod">
+        <id name="projectId" type="int">
+            <column name="PROJECT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="semen" type="java.lang.Integer">
+            <column name="SEMEN" />
+        </property>
+        <property name="besi" type="java.lang.Integer">
+            <column name="BESI" />
+        </property>
+        <property name="anchor" type="java.lang.Integer">
+            <column name="ANCHOR" />
+        </property>
+        <property name="tower" type="java.lang.Integer">
+            <column name="TOWER" />
+        </property>
+        <property name="me" type="java.lang.Integer">
+            <column name="ME" />
+        </property>
+        <property name="civilfab" type="java.lang.Integer">
+            <column name="CIVILFAB" />
+        </property>
+    </class>
+</hibernate-mapping>

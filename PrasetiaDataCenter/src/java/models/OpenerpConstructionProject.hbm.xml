@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.OpenerpConstructionProject" table="OPENERP_CONSTRUCTION_PROJECT" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="constructionProjectId" type="java.lang.Integer">
+            <column name="CONSTRUCTION_PROJECT_ID" />
+        </property>
+        <property name="actionType" type="string">
+            <column name="ACTION_TYPE" length="2" />
+        </property>
+        <property name="siteTypeId" type="java.lang.Integer">
+            <column name="SITE_TYPE_ID" />
+        </property>
+        <property name="operatorId" type="java.lang.Integer">
+            <column name="OPERATOR_ID" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="128" />
+        </property>
+        <property name="tanggalDimulai" type="timestamp">
+            <column name="TANGGAL_DIMULAI" length="23" />
+        </property>
+        <property name="siteId" type="java.lang.Integer">
+            <column name="SITE_ID" />
+        </property>
+        <property name="tanggalSuratTugas" type="timestamp">
+            <column name="TANGGAL_SURAT_TUGAS" length="23" />
+        </property>
+        <property name="active" type="java.lang.Integer">
+            <column name="ACTIVE" />
+        </property>
+        <property name="tanggalSelesai" type="timestamp">
+            <column name="TANGGAL_SELESAI" length="23" />
+        </property>
+        <property name="tanggalTargetRfi" type="timestamp">
+            <column name="TANGGAL_TARGET_RFI" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

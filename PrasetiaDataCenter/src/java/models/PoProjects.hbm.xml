@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.PoProjects" table="PO_PROJECTS" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="projectId" type="java.lang.Integer">
+            <column name="PROJECT_ID" />
+        </property>
+        <property name="noPo" type="string">
+            <column name="NO_PO" length="50" />
+        </property>
+        <property name="nilaiPo" type="big_decimal">
+            <column name="NILAI_PO" precision="12" />
+        </property>
+        <property name="nilaiProyek" type="big_decimal">
+            <column name="NILAI_PROYEK" precision="12" />
+        </property>
+        <property name="nilaiProyekPpn" type="big_decimal">
+            <column name="NILAI_PROYEK_PPN" precision="12" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="50" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="200" />
+        </property>
+        <property name="tanggalPo" type="timestamp">
+            <column name="TANGGAL_PO" length="23" />
+        </property>
+        <property name="percentInvoice1" type="java.lang.Integer">
+            <column name="PERCENT_INVOICE1" />
+        </property>
+        <property name="percentInvoice2" type="java.lang.Integer">
+            <column name="PERCENT_INVOICE2" />
+        </property>
+        <property name="percentInvoice3" type="java.lang.Integer">
+            <column name="PERCENT_INVOICE3" />
+        </property>
+        <property name="percentInvoice4" type="java.lang.Integer">
+            <column name="PERCENT_INVOICE4" />
+        </property>
+        <property name="userCreated" type="java.lang.Integer">
+            <column name="USER_CREATED" />
+        </property>
+        <property name="userModified" type="java.lang.Integer">
+            <column name="USER_MODIFIED" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" />
+        </property>
+        <property name="invoiceReq1" type="java.lang.Integer">
+            <column name="INVOICE_REQ1" />
+        </property>
+        <property name="invoiceReq2" type="java.lang.Integer">
+            <column name="INVOICE_REQ2" />
+        </property>
+        <property name="invoiceReq3" type="java.lang.Integer">
+            <column name="INVOICE_REQ3" />
+        </property>
+        <property name="invoiceReq4" type="java.lang.Integer">
+            <column name="INVOICE_REQ4" />
+        </property>
+    </class>
+</hibernate-mapping>

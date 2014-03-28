@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.Sites" table="SITES" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="customerId" type="java.lang.Integer">
+            <column name="CUSTOMER_ID" />
+        </property>
+        <property name="prasetiaSiteId" type="string">
+            <column name="PRASETIA_SITE_ID" length="12" />
+        </property>
+        <property name="customerSiteId" type="string">
+            <column name="CUSTOMER_SITE_ID" length="25" />
+        </property>
+        <property name="operatorId" type="java.lang.Integer">
+            <column name="OPERATOR_ID" />
+        </property>
+        <property name="islandId" type="java.lang.Integer">
+            <column name="ISLAND_ID" />
+        </property>
+        <property name="provinceId" type="java.lang.Integer">
+            <column name="PROVINCE_ID" />
+        </property>
+        <property name="cityId" type="java.lang.Integer">
+            <column name="CITY_ID" />
+        </property>
+        <property name="towerTypeId" type="java.lang.Integer">
+            <column name="TOWER_TYPE_ID" />
+        </property>
+        <property name="kakiTowerTypeId" type="java.lang.Integer">
+            <column name="KAKI_TOWER_TYPE_ID" />
+        </property>
+        <property name="tinggiTowerId" type="java.lang.Integer">
+            <column name="TINGGI_TOWER_ID" />
+        </property>
+        <property name="pondasiTypeId" type="java.lang.Integer">
+            <column name="PONDASI_TYPE_ID" />
+        </property>
+        <property name="shelterTypeId" type="java.lang.Integer">
+            <column name="SHELTER_TYPE_ID" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="50" />
+        </property>
+        <property name="alias1" type="string">
+            <column name="ALIAS_1" length="50" />
+        </property>
+        <property name="alias2" type="string">
+            <column name="ALIAS_2" length="50" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="100" />
+        </property>
+        <property name="actualCoordinateLong" type="string">
+            <column name="ACTUAL_COORDINATE_LONG" length="15" />
+        </property>
+        <property name="actualCoordinateLat" type="string">
+            <column name="ACTUAL_COORDINATE_LAT" length="15" />
+        </property>
+        <property name="userCreated" type="java.lang.Integer">
+            <column name="USER_CREATED" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" />
+        </property>
+        <property name="areaId" type="java.lang.Integer">
+            <column name="AREA_ID" />
+        </property>
+        <property name="pabrikasiTower" type="string">
+            <column name="PABRIKASI_TOWER" length="50" />
+        </property>
+        <property name="dayaPln" type="string">
+            <column name="DAYA_PLN" length="50" />
+        </property>
+        <property name="fieldTypeId" type="java.lang.Integer">
+            <column name="FIELD_TYPE_ID" />
+        </property>
+        <property name="bunga" type="java.lang.Integer">
+            <column name="BUNGA" />
+        </property>
+        <property name="fixedCost" type="big_decimal">
+            <column name="FIXED_COST" precision="12" />
+        </property>
+        <property name="keuanganProjectLock" type="java.lang.Integer">
+            <column name="KEUANGAN_PROJECT_LOCK" />
+        </property>
+    </class>
+</hibernate-mapping>

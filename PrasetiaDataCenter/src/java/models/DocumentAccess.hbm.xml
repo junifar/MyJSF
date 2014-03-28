@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.DocumentAccess" table="DOCUMENT_ACCESS" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="documentBinderTypeId" type="java.lang.Integer">
+            <column name="DOCUMENT_BINDER_TYPE_ID" />
+        </property>
+        <property name="groupId" type="java.lang.Integer">
+            <column name="GROUP_ID" />
+        </property>
+        <property name="created" type="date">
+            <column name="CREATED" length="10" />
+        </property>
+        <property name="modified" type="date">
+            <column name="MODIFIED" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

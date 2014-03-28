@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.CorTbg" table="COR_TBG" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="projectId" type="java.lang.Integer">
+            <column name="PROJECT_ID" />
+        </property>
+        <property name="boqFinalActualDone" type="timestamp">
+            <column name="BOQ_FINAL_ACTUAL_DONE" length="23" />
+        </property>
+        <property name="actualDraftCor" type="timestamp">
+            <column name="ACTUAL_DRAFT_COR" length="23" />
+        </property>
+        <property name="submitActualDone" type="timestamp">
+            <column name="SUBMIT_ACTUAL_DONE" length="23" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

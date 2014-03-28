@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.ProjectProblems" table="PROJECT_PROBLEMS" schema="dbo" catalog="PRST001_prod">
+        <composite-id name="id" class="models.ProjectProblemsId">
+            <key-property name="id" type="int">
+                <column name="ID" />
+            </key-property>
+            <key-property name="projectId" type="int">
+                <column name="PROJECT_ID" />
+            </key-property>
+        </composite-id>
+        <property name="ticketNo" type="string">
+            <column name="TICKET_NO" length="15" />
+        </property>
+        <property name="problemDetail" type="string">
+            <column name="PROBLEM_DETAIL" length="250" not-null="true" />
+        </property>
+        <property name="howToSolve" type="string">
+            <column name="HOW_TO_SOLVE" />
+        </property>
+        <property name="countermeasure" type="string">
+            <column name="COUNTERMEASURE" length="250" />
+        </property>
+        <property name="dateOccured" type="timestamp">
+            <column name="DATE_OCCURED" length="23" />
+        </property>
+        <property name="dateSolved" type="timestamp">
+            <column name="DATE_SOLVED" length="23" />
+        </property>
+        <property name="userCreated" type="java.lang.Integer">
+            <column name="USER_CREATED" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+        <property name="lastResponse" type="timestamp">
+            <column name="LAST_RESPONSE" length="23" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" not-null="true" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" not-null="true" />
+        </property>
+        <property name="problemTypeId" type="java.lang.Integer">
+            <column name="PROBLEM_TYPE_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

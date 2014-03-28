@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.ProjectInvoices" table="PROJECT_INVOICES" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="projectId" type="java.lang.Integer">
+            <column name="PROJECT_ID" />
+        </property>
+        <property name="term" type="java.lang.Integer">
+            <column name="TERM" />
+        </property>
+        <property name="invoiceTypeId" type="java.lang.Integer">
+            <column name="INVOICE_TYPE_ID" />
+        </property>
+        <property name="nilaiInvoice" type="big_decimal">
+            <column name="NILAI_INVOICE" precision="12" />
+        </property>
+        <property name="nilaiPembayaran" type="big_decimal">
+            <column name="NILAI_PEMBAYARAN" precision="12" />
+        </property>
+        <property name="noInvoice" type="string">
+            <column name="NO_INVOICE" length="100" />
+        </property>
+        <property name="tanggalInvoice" type="timestamp">
+            <column name="TANGGAL_INVOICE" length="23" />
+        </property>
+        <property name="tanggalPembayaran" type="timestamp">
+            <column name="TANGGAL_PEMBAYARAN" length="23" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="200" />
+        </property>
+        <property name="nilaiProyeksiPembayaran" type="big_decimal">
+            <column name="NILAI_PROYEKSI_PEMBAYARAN" precision="12" />
+        </property>
+        <property name="invoiceStatusId" type="java.lang.Integer">
+            <column name="INVOICE_STATUS_ID" />
+        </property>
+        <property name="nomorBuktiPotong" type="string">
+            <column name="NOMOR_BUKTI_POTONG" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

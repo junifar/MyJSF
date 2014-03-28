@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.Documents" table="DOCUMENTS" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="customerId" type="int">
+            <column name="CUSTOMER_ID" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" not-null="true" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+        <property name="parent" type="java.lang.Integer">
+            <column name="PARENT" />
+        </property>
+        <property name="priority" type="java.lang.Integer">
+            <column name="PRIORITY" />
+        </property>
+        <property name="documentTypeId" type="java.lang.Integer">
+            <column name="DOCUMENT_TYPE_ID" />
+        </property>
+        <property name="checkByProject" type="java.lang.Integer">
+            <column name="CHECK_BY_PROJECT" />
+        </property>
+        <property name="progressDetailId" type="java.lang.Integer">
+            <column name="PROGRESS_DETAIL_ID" />
+        </property>
+        <property name="nameAlias" type="string">
+            <column name="NAME_ALIAS" />
+        </property>
+        <property name="subPriority" type="java.lang.Integer">
+            <column name="SUB_PRIORITY" />
+        </property>
+        <property name="fromDepartementId" type="java.lang.Integer">
+            <column name="FROM_DEPARTEMENT_ID" />
+        </property>
+        <property name="siteTypeId" type="java.lang.Integer">
+            <column name="SITE_TYPE_ID" />
+        </property>
+        <property name="term1" type="java.lang.Integer">
+            <column name="TERM1" />
+        </property>
+        <property name="term2" type="java.lang.Integer">
+            <column name="TERM2" />
+        </property>
+        <property name="term3" type="java.lang.Integer">
+            <column name="TERM3" />
+        </property>
+        <property name="term4" type="java.lang.Integer">
+            <column name="TERM4" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.ABankAccounts" table="A_BANK_ACCOUNTS" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="bankId" type="java.lang.Integer">
+            <column name="BANK_ID" />
+        </property>
+        <property name="accountId" type="java.lang.Integer">
+            <column name="ACCOUNT_ID" />
+        </property>
+        <property name="noRekening" type="string">
+            <column name="NO_REKENING" length="100" />
+        </property>
+        <property name="namaPemilik" type="string">
+            <column name="NAMA_PEMILIK" length="100" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.MasterId" table="MASTER_ID" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="pref" type="string">
+            <column name="PREF" length="50" />
+        </property>
+        <property name="suff" type="string">
+            <column name="SUFF" length="50" />
+        </property>
+        <property name="midf" type="string">
+            <column name="MIDF" length="50" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" length="50" />
+        </property>
+        <property name="dept" type="string">
+            <column name="DEPT" length="50" />
+        </property>
+        <property name="month" type="java.lang.Integer">
+            <column name="MONTH" />
+        </property>
+        <property name="year" type="java.lang.Integer">
+            <column name="YEAR" />
+        </property>
+        <property name="inc" type="java.lang.Long">
+            <column name="INC" />
+        </property>
+        <property name="start" type="java.lang.Long">
+            <column name="START" />
+        </property>
+        <property name="limit" type="java.lang.Long">
+            <column name="LIMIT" />
+        </property>
+    </class>
+</hibernate-mapping>

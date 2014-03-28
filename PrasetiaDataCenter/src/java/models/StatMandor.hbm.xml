@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.StatMandor" table="STAT_MANDOR" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="kriteriaPenilaian" type="string">
+            <column name="KRITERIA_PENILAIAN" length="1000" />
+        </property>
+        <property name="deskripsi" type="string">
+            <column name="DESKRIPSI" length="1000" />
+        </property>
+        <property name="bobot" type="java.lang.Integer">
+            <column name="BOBOT" />
+        </property>
+        <property name="created" type="java.lang.Integer">
+            <column name="CREATED" />
+        </property>
+        <property name="dateCreated" type="date">
+            <column name="DATE_CREATED" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

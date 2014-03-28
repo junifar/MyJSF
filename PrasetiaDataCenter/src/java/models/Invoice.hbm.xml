@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2014 2:08:00 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="models.Invoice" table="INVOICE" schema="dbo" catalog="PRST001_prod">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="projectId" type="java.lang.Integer">
+            <column name="PROJECT_ID" />
+        </property>
+        <property name="poNo" type="java.lang.Integer">
+            <column name="PO_NO" />
+        </property>
+        <property name="noInvoice" type="string">
+            <column name="NO_INVOICE" length="12" />
+        </property>
+        <property name="nilaiInvoice" type="java.lang.Integer">
+            <column name="NILAI_INVOICE" />
+        </property>
+        <property name="nilaiProyeksiPembayaran" type="java.lang.Integer">
+            <column name="NILAI_PROYEKSI_PEMBAYARAN" />
+        </property>
+        <property name="tanggalPembayaran" type="timestamp">
+            <column name="TANGGAL_PEMBAYARAN" length="23" />
+        </property>
+        <property name="nilaiPembayaran" type="java.lang.Integer">
+            <column name="NILAI_PEMBAYARAN" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="50" />
+        </property>
+        <property name="userCreated" type="java.lang.Integer">
+            <column name="USER_CREATED" />
+        </property>
+        <property name="userModified" type="java.lang.Integer">
+            <column name="USER_MODIFIED" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="23" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="MODIFIED" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>
